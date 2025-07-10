@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>developerbee - About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <header class="main-header-small">
+        <nav class="navbar">
+            <div class="logo"><img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo"></div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about-section page-section">
+            <h2 class="section-title">Our Story. Our Vision.</h2>
+            <div class="about-content">
+                <p>At <strong>developerbee</strong>, we believe in the transformative power of design and technology. Our journey began with a simple yet profound idea: to craft digital experiences that not only look exceptional but also deliver measurable impact.</p>
+                <p>We are a passionate team of innovators, strategists, designers, and developers dedicated to turning complex challenges into elegant, user-centric solutions. With a deep understanding of market dynamics and a commitment to continuous learning, we partner with businesses to unlock their full digital potential.</p>
+                <p>Our philosophy is rooted in collaboration and transparency. We immerse ourselves in your vision, ensuring every project reflects your unique identity and business objectives. We don't just build; we strategize, we optimize, and we deliver results that resonate.</p>
+                <a href="{{ url_for('contact') }}" class="btn">Get in Touch</a>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team.</h2>
+                <p class="section-intro">A collective of diverse talents, united by a passion for innovation.</p>
+                <div class="team-grid">
+                    <div class="team-member-card">
+                        <img src="https://via.placeholder.com/200x200/3a3a3a/f0f0f0?text=Team+Member+1" alt="Team Member 1" class="team-member-photo">
+                        <h3>John Doe</h3>
+                        <p class="team-member-title">Founder & CEO</p>
+                        <div class="social-links">
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Twitter</a>
+                        </div>
+                    </div>
+                    <div class="team-member-card">
+                        <img src="https://via.placeholder.com/200x200/3a3a3a/f0f0f0?text=Team+Member+2" alt="Team Member 2" class="team-member-photo">
+                        <h3>Jane Smith</h3>
+                        <p class="team-member-title">Lead Designer</p>
+                        <div class="social-links">
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Dribbble</a>
+                        </div>
+                    </div>
+                    <div class="team-member-card">
+                        <img src="https://via.placeholder.com/200x200/3a3a3a/f0f0f0?text=Team+Member+3" alt="Team Member 3" class="team-member-photo">
+                        <h3>Michael Brown</h3>
+                        <p class="team-member-title">Head of Development</p>
+                        <div class="social-links">
+                            <a href="#">LinkedIn</a>
+                            <a href="#">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 developerbee. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Go to top">&#9650;</button>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 

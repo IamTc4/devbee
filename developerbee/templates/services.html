@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>developerbee - Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <header class="main-header-small">
+        <nav class="navbar">
+            <div class="logo"><img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo"></div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="services" class="services-section page-section">
+            <h2 class="section-title">Our Expertise. Your Success.</h2>
+            <p class="section-intro">We integrate design, technology, and strategy to build impactful digital solutions.</p>
+            <div class="services-grid">
+                <div class="service-card" id="web-app-development">
+                    <div class="service-icon">&#128187;</div> <!-- Laptop/Code icon -->
+                    <h3>Web & App Development</h3>
+                    <p>Building robust, scalable, and secure digital platforms tailored to your business needs.</p>
+                    <div class="service-details">
+                        <h4>Comprehensive Web Solutions</h4>
+                        <p>We craft responsive and high-performance websites, e-commerce platforms, and custom web applications. Our expertise spans modern frameworks and robust backend systems, ensuring your online presence is powerful and scalable.</p>
+                        <h4>Mobile App Innovation</h4>
+                        <p>From conceptualization to deployment, we develop native and cross-platform mobile applications for iOS and Android, focusing on intuitive design and seamless user experiences.</p>
+                    </div>
+                    <a href="{{ url_for('portfolio') }}#web-app-development" class="btn btn-small service-toggle-btn">Learn More</a>
+                </div>
+                <div class="service-card" id="ui-ux-design">
+                    <div class="service-icon">&#128444;&#65039;</div> <!-- Pen Tool icon -->
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive, engaging, and aesthetically pleasing user interfaces and experiences.</p>
+                    <div class="service-details">
+                        <h4>User-Centered Approach</h4>
+                        <p>Our design process begins and ends with the user. We conduct thorough research, create detailed wireframes, and develop interactive prototypes to ensure every interaction is meaningful and delightful.</p>
+                        <h4>Visual Excellence</h4>
+                        <p>We combine aesthetics with functionality, designing visually stunning interfaces that are easy to navigate and consistent across all devices, enhancing brand perception and user satisfaction.</p>
+                    </div>
+                    <a href="{{ url_for('portfolio') }}#ui-ux-design" class="btn btn-small service-toggle-btn">Learn More</a>
+                </div>
+                <div class="service-card" id="seo-site-optimization">
+                    <div class="service-icon">&#128269;</div> <!-- Magnifying Glass icon -->
+                    <h3>SEO & Site Optimization</h3>
+                    <p>Enhancing your online visibility and performance to drive organic traffic and conversions.</p>
+                    <div class="service-details">
+                        <h4>Visibility & Ranking</h4>
+                        <p>Our SEO strategies are designed to improve your search engine rankings, driving qualified organic traffic to your website. We focus on keyword research, on-page optimization, and technical SEO to ensure maximum visibility.</p>
+                        <h4>Performance Boost</h4>
+                        <p>Beyond ranking, we optimize site speed, mobile responsiveness, and overall user experience to reduce bounce rates and improve conversion paths, turning visitors into customers.</p>
+                    </div>
+                    <a href="{{ url_for('portfolio') }}#seo-site-optimization" class="btn btn-small service-toggle-btn">Learn More</a>
+                </div>
+                <div class="service-card" id="ml-automation">
+                    <div class="service-icon">&#129504;</div> <!-- Robot Face icon -->
+                    <h3>ML & Automation</h3>
+                    <p>Leveraging machine learning and automation to streamline processes and unlock new insights.</p>
+                    <div class="service-details">
+                        <h4>Intelligent Automation</h4>
+                        <p>We build custom machine learning models to automate repetitive tasks, analyze complex data sets, and provide predictive insights, leading to significant operational efficiencies and cost savings.</p>
+                        <h4>Data-Driven Decisions</h4>
+                        <p>Our solutions help businesses make smarter decisions by uncovering hidden patterns and trends in data, personalizing user experiences, and optimizing various business functions from sales to logistics.</p>
+                    </div>
+                    <a href="{{ url_for('portfolio') }}#ml-automation" class="btn btn-small service-toggle-btn">Learn More</a>
+                </div>
+                <div class="service-card" id="business-analysis">
+                    <div class="service-icon">&#128200;</div> <!-- Chart Increasing icon -->
+                    <h3>Business Analysis</h3>
+                    <p>Strategic insights and data-driven recommendations to optimize your operations and growth.</p>
+                    <div class="service-details">
+                        <h4>Strategic Insights</h4>
+                        <p>We dive deep into your business processes, market landscape, and competitive environment to identify key challenges and opportunities. Our analysis provides actionable strategies for growth and optimization.</p>
+                        <h4>Process Optimization</h4>
+                        <p>By mapping out current workflows and identifying bottlenecks, we recommend and implement solutions that streamline operations, reduce inefficiencies, and improve overall productivity and profitability.</p>
+                    </div>
+                    <a href="{{ url_for('portfolio') }}#business-analysis" class="btn btn-small service-toggle-btn">Learn More</a>
+                </div>
+                <div class="service-card" id="product-packaging">
+                    <div class="service-icon">&#128230;</div> <!-- Package icon -->
+                    <h3>Product Packaging</h3>
+                    <p>Designing impactful and memorable packaging that captures attention and tells your brand story.</p>
+                    <div class="service-details">
+                        <h4>Brand Storytelling Through Packaging</h4>
+                        <p>We create packaging that does more than just protect; it tells your brand's story, communicates your values, and creates an immediate connection with your target audience on the shelf.</p>
+                        <h4>Functional & Visually Striking</h4>
+                        <p>Our designs balance aesthetics with practicality, ensuring your packaging is not only eye-catching but also functional, protective, and cost-effective, enhancing the overall product experience.</p>
+                    </div>
+                    <a href="{{ url_for('portfolio') }}#product-packaging" class="btn btn-small service-toggle-btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 developerbee. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <button id="scrollToTopBtn" title="Go to top">&#9650;</button> <!-- Up arrow icon -->
+</body>
+</html> 
