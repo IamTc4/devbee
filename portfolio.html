@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeveloperBee - Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body style="background:#000; margin:0; padding-top: 100px;">
@@ -89,31 +89,31 @@
     </style>
    <header class="island-header" id="mainHeader">
       <div class="island-logo">
-        <img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo"> DeveloperBee
+        <img src="static/Design.jpeg" alt="developerbee Logo"> DeveloperBee
       </div>
       <button class="hamburger" id="navToggle" aria-label="Menu" tabindex="0">
         <span></span><span></span><span></span>
       </button>
       <ul class="island-nav" id="headerNav">
-        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li tabindex="0">
-          <a href="{{ url_for('services') }}">Services</a>
+          <a href="services.html">Services</a>
           <div class="services-dropdown">
-            <a href="{{ url_for('services') }}#web-app-development">Web & App Development</a>
-            <a href="{{ url_for('services') }}#ui-ux-design">UI/UX Design</a>
-            <a href="{{ url_for('services') }}#seo-site-optimization">SEO & Optimization</a>
-            <a href="{{ url_for('services') }}#ml-automation">ML & Automation</a>
-            <a href="{{ url_for('services') }}#business-analysis">Business Analysis</a>
-            <a href="{{ url_for('services') }}#product-packaging">Product Packaging</a>
+            <a href="services.html#web-app-development">Web & App Development</a>
+            <a href="services.html#ui-ux-design">UI/UX Design</a>
+            <a href="services.html#seo-site-optimization">SEO & Optimization</a>
+            <a href="services.html#ml-automation">ML & Automation</a>
+            <a href="services.html#business-analysis">Business Analysis</a>
+            <a href="services.html#product-packaging">Product Packaging</a>
           </div>
         </li>
-        <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
-        <li><a href="{{ url_for('about') }}">About Us</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
       </ul>
       <div class="island-action">
-        <a href="{{ url_for('contact') }}" class="nav-contact-btn">Contact Us</a>
+        <a href="contact.html" class="nav-contact-btn">Contact Us</a>
       </div>
     </header>
     
@@ -359,12 +359,12 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('services') }}">Services</a></li>
-                        <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
-                        <li><a href="{{ url_for('about') }}">About Us</a></li>
-                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                        <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
