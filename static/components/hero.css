@@ -1,0 +1,60 @@
+/* Modern hero section styles */
+.hero {
+    background-color: var(--background-color);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-main {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    background-color: var(--surface-color);
+    border-radius: 1rem;
+}
+
+.hero-main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.hero-main p {
+    font-size: 1.2rem;
+    color: var(--text-secondary-color);
+    margin-bottom: 2rem;
+}
+
+.hero-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.hero-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .hero-main {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .hero-secondary {
+        grid-template-columns: 1fr;
+    }
+}
