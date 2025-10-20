@@ -242,7 +242,7 @@
 <body>
     <header class="island-header" id="mainHeader">
         <div class="island-logo">
-            <img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo" />
+            <img src="static/Design.jpeg" alt="developerbee Logo" />
             DeveloperBee
         </div>
         <button class="hamburger" id="navToggle" aria-label="Menu" tabindex="0">
@@ -251,17 +251,17 @@
             <span></span>
         </button>
         <ul class="island-nav" id="headerNav">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li tabindex="0">
-                <a href="{{ url_for('services') }}">Services</a>
+                <a href="services.html">Services</a>
                 </li>
-            <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
-            <li><a href="{{ url_for('about') }}">About Us</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
         </ul>
         <div class="island-action">
-            <a href="{{ url_for('contact') }}" class="nav-contact-btn">Contact Us</a>
+            <a href="contact.html" class="nav-contact-btn">Contact Us</a>
         </div>
     </header>
 
