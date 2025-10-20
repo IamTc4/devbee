@@ -192,6 +192,7 @@
         font-family:'Montserrat',Arial,sans-serif;
       }
 
+    
       .island-logo { display:flex; align-items:center; font-size:1.3em; color:#5ff7ff; font-weight:700; letter-spacing:1px; padding-right:1.1em;}
       .island-logo img { height:34px; width:auto; margin-right:.6em; border-radius:0.6em;}
       .island-nav { display:flex; gap:1.1em; align-items:center; margin:0; padding:0; }
@@ -262,6 +263,7 @@
     <header class="island-header" id="mainHeader">
       <div class="island-logo">
         <img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo" srcset="{{ url_for('static', filename='Design.jpeg') }} 1x, {{ url_for('static', filename='Design.jpeg') }} 2x" sizes="(max-width: 600px) 50px, 100px"> DeveloperBee
+        <img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo"> DeveloperBee
       </div>
       <button class="hamburger" id="navToggle" aria-label="Menu" tabindex="0">
         <span></span><span></span><span></span>
@@ -332,6 +334,7 @@
             </div>
           </div>
           <video autoplay loop muted playsinline width="500" aria-label="DeveloperBee services demonstration video" loading="lazy">
+          <video autoplay loop muted playsinline width="500" aria-label="DeveloperBee services demonstration video">
             <source src="/static/ok.webm" type="video/webm">
             Your browser does not support the video tag.
           </video>
@@ -419,18 +422,21 @@
             <div class="portfolio-grid">
                 <div class="project-card">
                     <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+1" alt="Project 1" loading="lazy">
+                    <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+1" alt="Project 1">
                     <h3>WhatsApp Ordering for Mumbai Wholesaler</h3>
                     <p>Problem: Missed phone orders. Solution: WhatsApp catalog + auto‑replies. Result: +40% weekly orders.</p>
                     <a href="#" class="btn btn-small">View Case Study</a>
                 </div>
                 <div class="project-card">
                     <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+2" alt="Project 2" loading="lazy">
+                    <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+2" alt="Project 2">
                     <h3>Mini‑ERP for Distributor (50+ products)</h3>
                     <p>Problem: Manual billing and stock errors. Solution: Web dashboard + role‑based access. Result: 3× faster invoicing.</p>
                     <a href="#" class="btn btn-small">View Case Study</a>
                 </div>
                 <div class="project-card">
                     <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+3" alt="Project 3" loading="lazy">
+                    <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+3" alt="Project 3">
                     <h3>SEO + Speed for Local Retailer</h3>
                     <p>Problem: Low traffic, slow site. Solution: On‑page SEO + performance fixes. Result: +120% organic visits.</p>
                     <a href="#" class="btn btn-small">View Case Study</a>
