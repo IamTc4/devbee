@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Primary Meta Tags -->
-    <title>DeveloperBee - Web Development & Digital Solutions | Affordable Web Design & App Development</title>
-    <meta name="title" content="DeveloperBee - Web Development & Digital Solutions | Affordable Web Design & App Development">
-    <meta name="description" content="Professional web development, mobile app design, and digital solutions. From ₹199/month Digital Dukaan to enterprise ERP systems. Expert UI/UX design, SEO optimization, and business automation.">
+    <title>DeveloperBee - Expert Web & App Development for Indian Businesses</title>
+    <meta name="title" content="DeveloperBee - Expert Web & App Development for Indian Businesses">
+    <meta name="description" content="DeveloperBee provides affordable, high-quality web design, mobile app development, and SEO services for local shops, wholesalers, and small businesses in India. Get your business online today.">
     <meta name="keywords" content="web development, mobile app development, UI/UX design, digital marketing, SEO, business automation, ERP systems, affordable web design, digital solutions, India">
     <meta name="author" content="DeveloperBee">
     <meta name="robots" content="index, follow">
@@ -130,7 +130,44 @@
                 "priceCurrency": "INR",
                 "description": "Dynamic website with analytics and payments for ₹699/month"
             }
-        ]
+        ],
+        "mainEntity": {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Why should I Get #BrandedBydeveloperbee?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "developerbee has a proven track record with numerous satisfied clients, making strides as a leading digital agency. We focus on delivering measurable impact and an almost perfect client satisfaction score across all our functions."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What does the process look like while working with developerbee?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Our process is designed for clarity and collaboration. It typically begins with a discovery phase, followed by strategy, design, development, and ongoing support. We ensure transparent communication and iterative feedback loops at every stage."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is your pricing structure?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Transparent plans for every stage: Digital Dukaan from ₹199–₹699/month; Websites from ₹5k–₹12k; Enterprise (ERP/AI/Cybersecurity) is custom — typical ERP from ₹50k+. See the Pricing page for full details."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What types of industries does developerbee work with?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We have successfully completed projects across a diverse range of industries and domains, including tech, e-commerce, healthcare, finance, and more. Our adaptable approach allows us to serve various sectors effectively."
+                    }
+                }
+            ]
+        }
     }
     </script>
 </head>
@@ -154,6 +191,7 @@
         transition: box-shadow .3s, border-color .3s;
         font-family:'Montserrat',Arial,sans-serif;
       }
+
     
       .island-logo { display:flex; align-items:center; font-size:1.3em; color:#5ff7ff; font-weight:700; letter-spacing:1px; padding-right:1.1em;}
       .island-logo img { height:34px; width:auto; margin-right:.6em; border-radius:0.6em;}
@@ -205,7 +243,7 @@
         .island-nav.open { opacity:1; pointer-events:auto;}
         .island-nav li {width:100%;}
         .services-dropdown {position:static; margin:.3em 0 0 0;}
-        
+
         /* Improve mobile nav touch targets */
         .island-nav a {
           padding: 12px 16px;
@@ -224,6 +262,7 @@
     </style>
     <header class="island-header" id="mainHeader">
       <div class="island-logo">
+        <img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo" srcset="{{ url_for('static', filename='Design.jpeg') }} 1x, {{ url_for('static', filename='Design.jpeg') }} 2x" sizes="(max-width: 600px) 50px, 100px"> DeveloperBee
         <img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo"> DeveloperBee
       </div>
       <button class="hamburger" id="navToggle" aria-label="Menu" tabindex="0">
@@ -294,6 +333,7 @@
               <a href="{{ url_for('contact') }}" class="btn btn-secondary" aria-label="Book a free ERP demo consultation">Book a Free ERP Demo</a>
             </div>
           </div>
+          <video autoplay loop muted playsinline width="500" aria-label="DeveloperBee services demonstration video" loading="lazy">
           <video autoplay loop muted playsinline width="500" aria-label="DeveloperBee services demonstration video">
             <source src="/static/ok.webm" type="video/webm">
             Your browser does not support the video tag.
@@ -381,18 +421,21 @@
             <h2 class="section-title">Case Studies. Proof it works.</h2>
             <div class="portfolio-grid">
                 <div class="project-card">
+                    <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+1" alt="Project 1" loading="lazy">
                     <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+1" alt="Project 1">
                     <h3>WhatsApp Ordering for Mumbai Wholesaler</h3>
                     <p>Problem: Missed phone orders. Solution: WhatsApp catalog + auto‑replies. Result: +40% weekly orders.</p>
                     <a href="#" class="btn btn-small">View Case Study</a>
                 </div>
                 <div class="project-card">
+                    <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+2" alt="Project 2" loading="lazy">
                     <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+2" alt="Project 2">
                     <h3>Mini‑ERP for Distributor (50+ products)</h3>
                     <p>Problem: Manual billing and stock errors. Solution: Web dashboard + role‑based access. Result: 3× faster invoicing.</p>
                     <a href="#" class="btn btn-small">View Case Study</a>
                 </div>
                 <div class="project-card">
+                    <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+3" alt="Project 3" loading="lazy">
                     <img src="https://via.placeholder.com/600x400/3a3a3a/f0f0f0?text=Home+Project+3" alt="Project 3">
                     <h3>SEO + Speed for Local Retailer</h3>
                     <p>Problem: Low traffic, slow site. Solution: On‑page SEO + performance fixes. Result: +120% organic visits.</p>
@@ -418,12 +461,12 @@
                 <h2 class="section-title">Tools We Use.</h2>
                 <p class="tools-intro">Our toolbox is designed to bring your brand vision to life.</p>
                 <div class="tool-logos-grid">
-                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+1" alt="Tool Logo 1">
-                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+2" alt="Tool Logo 2">
-                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+3" alt="Tool Logo 3">
-                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+4" alt="Tool Logo 4">
-                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+5" alt="Tool Logo 5">
-                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+6" alt="Tool Logo 6">
+                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+1" alt="Tool Logo 1" loading="lazy">
+                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+2" alt="Tool Logo 2" loading="lazy">
+                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+3" alt="Tool Logo 3" loading="lazy">
+                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+4" alt="Tool Logo 4" loading="lazy">
+                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+5" alt="Tool Logo 5" loading="lazy">
+                    <img src="https://via.placeholder.com/100x100/2a2a2a/f0f0f0?text=Tool+6" alt="Tool Logo 6" loading="lazy">
                 </div>
             </div>
         </section>
@@ -555,7 +598,7 @@
         <div class="footer-content">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo" class="footer-logo">
+                    <img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo" class="footer-logo" loading="lazy">
                     <span class="footer-brand-name">DeveloperBee</span>
                 </div>
                 <div class="footer-links">
