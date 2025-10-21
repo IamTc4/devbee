@@ -519,7 +519,7 @@ section {
     justify-items: center;
 }
 
-.client-logos-grid img {
+.client-logos-grid a img {
     max-width: 100%;
     height: auto;
     opacity: 0.6; /* Slightly muted for a classy look */
@@ -527,7 +527,7 @@ section {
     transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-.client-logos-grid img:hover {
+.client-logos-grid a:hover img {
     opacity: 1; /* Full color on hover */
     filter: grayscale(0%);
 }
