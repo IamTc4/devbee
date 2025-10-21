@@ -12,112 +12,8 @@
   <div id="preloader">
     <div class="spinner"></div>
   </div>
-  <!-- Mobile-Friendly Dynamic Island Header -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <style>
-    .island-header {
-      position: fixed;
-      top: 20px; left: 50%; transform: translateX(-50%);
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0.6em 1.5em; width: min(97vw, 1050px);
-      background: #000;
-      border-radius: 3em;
-      box-shadow: 0 6px 32px #5ff7ff22, 0 0 0 4px #5ff7ff12;
-      border: 1.7px solid #5FF7FF44;
-      z-index:1300;
-      transition: box-shadow .3s, border-color .3s;
-      font-family:'Montserrat',Arial,sans-serif;
-    }
-  
-    .island-logo { display:flex; align-items:center; font-size:1.3em; color:#5ff7ff; font-weight:700; letter-spacing:1px; padding-right:1.1em;}
-    .island-logo img { height:34px; width:auto; margin-right:.6em; border-radius:0.6em;}
-    .island-nav { display:flex; gap:1.1em; align-items:center; margin:0; padding:0; }
-    .island-nav li { list-style:none; position:relative;}
-    .island-nav a { color:#eafffa; text-decoration:none; font-weight:600; padding:0.36em 0.88em; border-radius:.6em; font-size:1em; display:block; transition: color .21s, background .2s;}
-    .island-nav a:hover, .island-nav a.active { color: #5FF7FF; background:#191e23;}
-    .services-dropdown {
-      display:none; position: absolute; left:0; top:100%; background: #191920;
-      border-radius:0.7em; min-width:194px; box-shadow:0 4px 16px #171c1e88;
-      z-index:1001; flex-direction:column; overflow:hidden; padding:0.2em 0; margin-top:.17em;
-    }
-    .island-nav li:focus-within > .services-dropdown,
-    .island-nav li:hover > .services-dropdown {
-      display: flex !important;
-    }
-    .services-dropdown a {color:#eafffa; background:none; font-size:0.98em; border-radius:0; padding:.83em 1.15em;}
-    .services-dropdown a:hover {background:#101215; color:#5FF7FF;}
-    .island-action { margin-left:1em;}
-    .nav-contact-btn {
-      background: #5FF7FF; color: #191e23; border:none; border-radius:1.3em; font-weight:700;
-      font-size:1em; padding:.44em 1.3em; box-shadow:0 2px 8px #5ff7ff55;
-      cursor:pointer; transition:.2s; text-decoration:none; margin-left:0.2em;
-    }
-    .nav-contact-btn:hover { background:#fffde7; color:#131618;}
-    /* Hamburger for mobile */
-    .hamburger {
-      display:none; flex-direction:column; justify-content:center; height:36px;
-      width:40px; cursor:pointer; margin-left:.2em;
-      background: none; border:none; outline:none; z-index:1400;
-    }
-    .hamburger span {
-      background:#5FF7FF; height:4px; margin:4px 0; width:28px; border-radius:4px; display:block; transition:all .3s;
-    }
-    @media (max-width:800px){
-      .island-header{padding:0.5em 0.3em; width:99vw; font-size:1em;}
-      .island-logo{font-size:.93em;}
-      .island-action{margin-left:.5em;}
-      /* Hamburger visible, nav hidden */
-      .hamburger {display:flex;}
-      .island-nav {
-        position: fixed; flex-direction:column; gap:0.3em; align-items:flex-start;
-        background: #000;
-        top:65px; left:50%; transform:translateX(-50%);
-        border-radius:1.3em; min-width:70vw; width:330px; box-shadow:0 8px 40px #181e2844;
-        padding:1em 1em 1em 1.1em;
-        opacity: 0; pointer-events: none; z-index:1401; transition:opacity .23s;
-      }
-      .island-nav.open { opacity:1; pointer-events:auto;}
-      .island-nav li {width:100%;}
-      .services-dropdown {position:static; margin:.3em 0 0 0;}
-    }
-    @media (max-width:420px){
-      .island-header{padding:0.3em 0.1em;}
-      .island-logo img{height:27px;}
-      .island-nav{min-width:93vw; width:96vw; padding:0.7em 0.5em;}
-      .nav-contact-btn{font-size:0.92em;}
-    }
-  </style>
-  <header class="island-header" id="mainHeader">
-    <div class="island-logo">
-      <img src="static/Design.jpeg" alt="developerbee Logo"> DeveloperBee
-    </div>
-    <button class="hamburger" id="navToggle" aria-label="Menu" tabindex="0">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="island-nav" id="headerNav">
-        <li><a href="index.html">Home</a></li>
-        <li tabindex="0">
-          <a href="services.html">Services</a>
-          <div class="services-dropdown">
-            <a href="services.html#web-app-development">Web & App Development</a>
-            <a href="services.html#ui-ux-design">UI/UX Design</a>
-            <a href="services.html#seo-site-optimization">SEO & Optimization</a>
-            <a href="services.html#ml-automation">ML & Automation</a>
-            <a href="services.html#business-analysis">Business Analysis</a>
-            <a href="services.html#product-packaging">Product Packaging</a>
-          </div>
-        </li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-      </ul>
-    <div class="island-action">
-      <a href="contact.html" class="nav-contact-btn">Contact Us</a>
-    </div>
-  </header>
-  
-
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
     <main>
         <section class="contact-us-section">
             <h2 class="section-title">Get in Touch</h2>
@@ -167,7 +63,7 @@
         <div class="footer-content">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="{{ url_for('static', filename='Design.jpeg') }}" alt="developerbee Logo" class="footer-logo">
+                    <img src="static/Design.jpeg" alt="developerbee Logo" class="footer-logo">
                     <span class="footer-brand-name">DeveloperBee</span>
                 </div>
                 <div class="footer-links">
@@ -199,7 +95,8 @@
         </div>
     </footer>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="static/header.js"></script>
+    <script src="static/script.js"></script>
     <button id="scrollToTopBtn" title="Go to top">&#9650;</button>
 </body>
-</html> 
+</html>
