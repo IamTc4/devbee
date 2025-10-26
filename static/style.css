@@ -78,100 +78,52 @@ img, iframe {
 }
 
 /* Header & Navigation */
-.main-header {
-    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1920x1080/111111/f0f0f0?text=Your+Agency+Background') no-repeat center center/cover;
-    height: 100vh;
+.island-header {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    position: relative;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
-
-.navbar-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
+.island-logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-
-.navbar {
-    background: #000000;
-    border-bottom: 2px solid #5FF7FF44;
-    padding: 1rem 0;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em;
+    gap: 0.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--accent-color);
-    gap: 0.7em;
 }
 
-.logo img {
-    height: 48px;
-    width: auto;
-    margin-right: 0.5em;
+.island-logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 
-.nav-links {
+.island-nav {
     display: flex;
-    gap: 1.2rem;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
-    align-items: center;
 }
 
-.nav-contact-btn {
-    background: var(--accent-color);
-    color: var(--dark-bg);
-    border: none;
-    border-radius: 2rem;
-    padding: 0.7rem 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px #5FF7FF33;
+.island-nav a {
+    color: var(--text-light);
     text-decoration: none;
-    display: inline-block;
-    margin-left: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.nav-contact-btn:hover {
-    background: #fffde7;
-    color: var(--dark-bg);
-    box-shadow: 0 4px 16px #5FF7FF99;
-}
-
-.nav-links li a {
+.island-nav a:hover {
     color: var(--accent-color);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.nav-links li a:hover, .nav-links li a.active {
-    color: #fffde7;
-}
-
-@media (max-width: 700px) {
-    .nav-links li a {
-        padding: 12px 16px;
-        min-height: 48px;
-        min-width: 48px;
-    }
-}
-
-/* Services Dropdown */
-.nav-links li {
-    position: relative;
 }
 
 .services-dropdown {
@@ -190,7 +142,7 @@ img, iframe {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
-.nav-links li:hover .services-dropdown {
+.island-nav li:hover .services-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -215,15 +167,62 @@ img, iframe {
     padding-left: 25px;
 }
 
-.services-dropdown a::before {
-    content: '→';
-    margin-right: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.island-action .nav-contact-btn {
+    background: var(--accent-color);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px #5FF7FF33;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.services-dropdown a:hover::before {
-    opacity: 1;
+.island-action .nav-contact-btn:hover {
+    background: #fffde7;
+    color: var(--dark-bg);
+    box-shadow: 0 4px 16px #5FF7FF99;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 800px) {
+    .island-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1a1a1a;
+        padding: 1rem;
+    }
+
+    .island-nav.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
 .hero {
   background: linear-gradient(135deg, #101115 0%, #18191d 50%, #16181a 100%);
@@ -519,7 +518,7 @@ section {
     justify-items: center;
 }
 
-.client-logos-grid img {
+.client-logos-grid a img {
     max-width: 100%;
     height: auto;
     opacity: 0.6; /* Slightly muted for a classy look */
@@ -527,7 +526,7 @@ section {
     transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-.client-logos-grid img:hover {
+.client-logos-grid a:hover img {
     opacity: 1; /* Full color on hover */
     filter: grayscale(0%);
 }
@@ -610,47 +609,58 @@ section {
     margin-top: 20px;
 }
 
-/* Tools Section */
+/* --- Tools Section Base Styling --- */
 .tools-section {
-    background-color: var(--dark-surface);
-    padding: 80px 0;
+    padding: 80px 20px; /* More padding for better spacing */
     text-align: center;
+    background-color: #1a1a1a; /* Dark background to make the spotlight pop */
+    color: #f0f0f0; /* Light text for contrast */
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #00d4ff; /* Accent color for the title */
 }
 
 .tools-intro {
     font-size: 1.2em;
-    color: var(--text-medium);
-    margin-top: -30px;
-    margin-bottom: 60px;
+    color: #ccc;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* --- Tool Logos Grid for Spotlight Effect --- */
 .tool-logos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    align-items: center;
-    justify-items: center;
+    /* Responsive grid: 100px min, up to 1fr per column, max 6 columns */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 30px; /* Space between logos */
+    max-width: 1000px; /* Max width for the grid */
+    margin: 0 auto; /* Center the grid */
+    padding: 0 20px; /* Horizontal padding */
 }
 
 .tool-logos-grid img {
-    max-width: 100%;
-    height: 60px; /* Adjust as needed */
-    object-fit: contain;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
+    width: 100px; /* Fixed size for logos */
+    height: 100px;
+    object-fit: contain; /* Ensures logos fit without cropping */
+    border-radius: 15px; /* Slightly rounded corners for a modern look */
+    padding: 10px; /* Inner padding for the logo if it's smaller than the box */
+    background-color: #2a2a2a; /* Dark background for each logo card */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transform: scale(1);
+    transition: all 0.4s ease-in-out; /* Smooth transition for all changes */
+    cursor: pointer; /* Indicate interactivity */
 }
 
+/* Hover effect for individual logo */
 .tool-logos-grid img:hover {
-    opacity: 1;
-}
-
-/* Portfolio Section */
-.portfolio-section {
-    background-color: var(--dark-bg);
-    padding-bottom: 100px;
+    transform: scale(1.15); /* Slightly larger */
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4); /* Glowing effect (blue accent) */
+    z-index: 10; /* Bring hovered item to front */
 }
 
 /* Portfolio Hero Section */
@@ -762,7 +772,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.project-card img {
+.project-card img, .project-card video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -770,7 +780,7 @@ section {
     transition: transform 0.5s ease;
 }
 
-.project-card:hover img {
+.project-card:hover img, .project-card:hover video {
     transform: scale(1.1);
 }
 
@@ -783,8 +793,7 @@ section {
     background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
-    align-items: center;
-    opacity: 0;
+    opacity: 0.6;
     transition: opacity 0.5s ease;
     border-radius: 8px;
 }
@@ -957,6 +966,89 @@ section {
     color: #e0e0e0;
     max-width: 800px;
     margin: 0 auto 60px;
+}
+
+.contact-us-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none;  /* for Internet Explorer and Edge */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.carousel-item {
+    flex: 0 0 80%;
+    max-width: 80%;
+    scroll-snap-align: center;
+    margin: 0 1rem;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem 1.5rem 1.5rem;
+    color: #fff;
+}
+
+.carousel-item-content h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+    color: var(--accent-color);
+}
+
+.carousel-item-content p {
+    font-size: 1rem;
+    margin: 0 0 1rem;
+}
+
+.carousel-item-content .view-project {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .carousel-item {
+        flex-basis: 45%;
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-item {
+        flex-basis: 30%;
+        max-width: 30%;
+    }
 }
 
 .contact-us-content {
@@ -1974,112 +2066,99 @@ label {
     margin: 1.1em;
     padding: 2em 1.3em 1.7em 1.3em;
   }
-  .pricing-card:hover, .pricing-card:focus-within {
-    transform: scale(1.035) translateY(-3px);
-    box-shadow: 0 16px 48px 0 #5ff7ff55, 0 2px 24px 0 #262a3e55;
-    border-color: #6FFFFF;
-  }
-  .pricing-card h3.accent { color: var(--accent-color); font-size: 1.4em; margin-bottom: 0.6em; }
-.plan-price { font-size: 2em; font-weight: 700; color: #8cffff; margin-bottom: 0.4em; }
-.price-frequency { font-size: 0.95em; color: var(--text-medium); font-weight: 400; }
-.plan-bestfor { color: var(--text-medium); font-size: 1em; margin-bottom: 1em; }
-.plan-features { margin: 0 0 1.2em 0; padding: 0; list-style: none; color: var(--text-light); font-size: 1em; }
-.plan-features li { margin-bottom: 0.6em; padding-left: 0.9em; position: relative; }
-.plan-features li:before { content: "✔"; color: var(--accent-color); position: absolute; left: 0; font-size: 1.1em; }
-.pricing-card .btn { width: 100%; margin-top: auto; font-size: 1.08em; padding: 0.6em 0; border-radius: 0.9rem; background: var(--accent-color); box-shadow: 0 2px 10px #5FF7FF22; color: var(--dark-bg); border: none; cursor: pointer; font-weight: 600; transition: background 0.15s, color 0.15s; }
-.pricing-card .btn:hover { background: #fffde7; color: var(--dark-bg); }
 
-.service-breakdown { text-align: center; margin-top: 2rem; margin-bottom: 2rem; }
-.service-breakdown h4.accent { color: var(--accent-color); font-size: 1.35em; margin-bottom: 1.3em; }
-.addon-cards-grid { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
-.addon-card { background: var(--dark-surface); border-radius: 0.9em; border: 1.5px solid var(--border-color); box-shadow: 0 2px 12px #5FF7FF11; padding: 1.4rem 1.5rem; min-width: 220px; max-width: 300px; margin-bottom: 1.5rem; color: #f0f0f0; text-align: left; font-size: 1em; transition: box-shadow 0.15s; }
-.addon-card strong { color: var(--accent-color); font-weight: 600; margin-bottom: 0.7em; display: inline-block; }
-.addon-card ul { list-style: none; margin: 0; padding: 0; }
-.addon-card li { margin-bottom: 0.45em; color: var(--text-medium); }
-.addon-card:hover { box-shadow: 0 4px 20px #5FF7FF44; }
-.note { font-size: 1em; margin-top: 0.7em; color: var(--accent-color); }
-
-@media (max-width: 900px) {
-  .pricing-cards-grid, .addon-cards-grid { 
-    flex-direction: column; 
-    gap: 1.2rem; 
-    align-items: center; 
-    padding: 0 1rem;
-  }
-  .pricing-card, .addon-card { 
-    min-width: 90vw; 
-    max-width: 98vw; 
-    box-sizing: border-box;
-    margin: 0.5rem;
-  }
+/* Carousel Styles */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
 }
 
-@media (max-width: 768px) {
-  .pricing-main {
-    padding: 2rem 1rem;
-  }
-  
-  .pricing-main .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .pricing-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0;
-  }
-  
-  .pricing-card {
-    margin: 0;
-    padding: 1.5rem 1rem;
-    border-radius: 1.5rem;
-  }
-  
-  .pricing-card h3.accent {
-    font-size: 1.2em;
-  }
-  
-  .plan-price {
-    font-size: 1.6em;
-  }
-  
-  .plan-features {
-    font-size: 0.95em;
-  }
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    /* Removed scroll-snap-type: x mandatory; if you plan to use JS for smooth scrolling/autoplay */
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
-@media (max-width: 600px) {
-  .pricing-main, .pricing-main .section-title, .pricing-main .section-intro { padding: 1rem 0.1rem; }
-  .pricing-card, .addon-card { padding: 1.1rem 0.7rem; font-size: 0.97em; }
-  
-  /* Extra small mobile devices */
-  .hero h1 {
-    font-size: 1.8em !important;
-  }
-  
-  .hero p {
-    font-size: 1em !important;
-  }
-  
-  .section-title {
-    font-size: 1.8em;
-    padding: 0 0.5rem;
-  }
-  
-  .category-card, .project-card, .testimonial-card {
-    padding: 1rem;
-    margin: 0.5rem 0;
-  }
-  
-  /* Improve button touch targets */
-  .btn, .btn-small, .view-all-btn {
-    min-height: 44px;
-    padding: 12px 20px;
-  }
-  
-  /* Improve form inputs for mobile */
-  input, textarea, select {
-    font-size: 16px; /* Prevents zoom on iOS */
-    padding: 12px;
-  }
+
+.carousel::-webkit-scrollbar {
+    display: none; 
+}
+
+/* Updated to stack image and content vertically */
+.carousel-item {
+    flex: 0 0 80%;
+    max-width: 80%;
+    scroll-snap-align: center;
+    margin: 0 1rem;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* ADDED: Use Flexbox to stack content */
+    display: flex;
+    flex-direction: column;
+    /* Set a dark background for the whole item */
+    background: #191919; 
+}
+
+.carousel-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Set a consistent image height */
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Set a fixed height for a consistent visual area */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    display: block;
+}
+
+/* REMOVED ABSOLUTE POSITIONING */
+.carousel-item-content {
+    position: relative; /* Changed from absolute to relative */
+    /* REMOVED: background: linear-gradient(...) */
+    background: #272626; /* Solid background matching the item */
+    padding: 1rem 1.5rem 1.5rem; /* Adjusted vertical padding */
+    color: #fff;
+    flex-grow: 1; /* Allows the content area to expand if needed */
+}
+
+.carousel-item-content h2 {
+    font-size: 1.4rem; /* Slightly reduced font size */
+    margin: 0 0 0.4rem;
+    color: #5FF7FF; /* Used a fixed color since var(--accent-color) is undefined here */
+}
+
+.carousel-item-content p {
+    font-size: 0.95rem; /* Slightly reduced font size */
+    margin: 0 0 1rem;
+}
+
+.carousel-item-content .view-project {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    /* Assuming you have styling for the button itself */
+}
+
+/* Media Queries (Adjusted for the new structure) */
+@media (min-width: 768px) {
+    .carousel-item {
+        flex-basis: 45%;
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-item {
+        flex-basis: 30%;
+        max-width: 30%;
+    }
 }
