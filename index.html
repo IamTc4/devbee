@@ -67,6 +67,7 @@
     <link rel="stylesheet" href="static/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -404,6 +405,10 @@
   </div>
 </header>
 <body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <div class="content-wrapper">
     <!-- PAGE CONTENT BELOW -->
     <main>
         <section class="hero" aria-label="Hero Section">
@@ -780,9 +785,11 @@
             </div>
         </div>
     </footer>
+    </div>
 
     <script src="static/header.js"></script>
     <script src="static/script.js"></script>
+    <script src="static/3d-background.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init({ once: true, duration: 800 });
