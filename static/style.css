@@ -254,6 +254,21 @@ img, iframe {
 }
 
 /* Mobile Hero Responsiveness */
+@media (max-width: 420px) {
+  .island-header {
+    padding: 0.5em 1em;
+  }
+  .island-logo {
+    font-size: 1.2em;
+  }
+  .island-nav a {
+    font-size: 0.9em;
+  }
+  .nav-contact-btn {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+}
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -2211,6 +2226,19 @@ label {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
     /* Assuming you have styling for the button itself */
+}
+
+.scroll-indicator {
+    display: none;
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-medium);
+}
+
+@media (max-width: 768px) {
+    .scroll-indicator {
+        display: block;
+    }
 }
 
 /* Media Queries (Adjusted for the new structure) */

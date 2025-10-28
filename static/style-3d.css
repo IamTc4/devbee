@@ -14,7 +14,14 @@
     backdrop-filter: blur(10px);
 }
 
-section:not(.hero) {
+section:not(.hero),
+.pricing-main,
+.category-overview-section,
+.design-thinking-section,
+.tools-section,
+.faq-section,
+.bottom-contact-form,
+.carousel-container {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     padding: 2rem;
