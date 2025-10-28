@@ -2,8 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Preloader
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
-        preloader.classList.add('hide');
+        if (preloader) {
+            preloader.classList.add('hide');
+        }
     });
+
     // FAQ
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
@@ -11,15 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const answer = item.querySelector('.faq-answer');
         const icon = item.querySelector('.icon');
 
-        question.addEventListener('click', () => {
-            const isOpen = answer.classList.toggle('open');
-            icon.textContent = isOpen ? '−' : '+';
-        });
+        if (question && answer && icon) {
+            question.addEventListener('click', () => {
+                const isOpen = answer.classList.toggle('open');
+                icon.textContent = isOpen ? '−' : '+';
+            });
+        }
     });
 
     // Scroll to top button
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
     if (scrollToTopBtn) {
         window.addEventListener('scroll', () => {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -34,4 +38,41 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         });
     }
+
+    // Advanced Scrolling Effects
+    const header = document.getElementById('mainHeader');
+    const heroTitle = document.querySelector('.hero-title');
+    const sections = document.querySelectorAll('section');
+
+    const revealSection = () => {
+        const windowHeight = window.innerHeight;
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < windowHeight - 150) {
+                section.classList.add('reveal');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+
+        // Sticky Header Effect
+        if (header) {
+            if (scrollPosition > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+
+        // Parallax Effect for Hero Title
+        if (heroTitle) {
+            heroTitle.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+        }
+
+        revealSection();
+    });
+
+    revealSection();
 });
