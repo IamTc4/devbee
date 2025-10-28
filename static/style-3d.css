@@ -9,7 +9,12 @@
     z-index: -1;
 }
 
-section {
+.hero {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+section:not(.hero) {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     padding: 2rem;
