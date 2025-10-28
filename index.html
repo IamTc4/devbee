@@ -65,6 +65,7 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/style-3d.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     
@@ -404,6 +405,7 @@
   </div>
 </header>
 <body>
+    <canvas id="bg"></canvas>
     <!-- PAGE CONTENT BELOW -->
     <main>
         <section class="hero" aria-label="Hero Section">
@@ -787,5 +789,7 @@
     <script>
       AOS.init({ once: true, duration: 800 });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="static/script-3d.js"></script>
 </body>
 </html>
